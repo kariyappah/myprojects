@@ -1,0 +1,70 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Hello App Engine And Login With Google Using Java</title>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<link href="css/social-buttons.css" rel="stylesheet" />
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<style>
+.demoDiv {
+    margin: auto;
+    text-align: center;
+}
+.field {
+    padding: 0 0 10px 0;
+}
+
+.label {
+    padding: 3px 0;
+    font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+    <h1>Hello App Engine!</h1>
+
+    <table>
+        <tr>
+            <td colspan="2" style="font-weight: bold;">Available Servlets:</td>
+        </tr>
+        <tr>
+            <td><a href='/hello'>The servlet</a></td>
+        </tr>
+    </table>
+
+    <h1>Login With Google Using Java!</h1>
+    <div class="demoDiv">
+        <a
+            href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=https://mygcpproject-10081982.appspot.com/oauth2callback&response_type=code&client_id=95344702868-m3qt0589t2m0oahscg21mgudkofjpsum.apps.googleusercontent.com&approval_prompt=force"
+            class="btn btn-lg btn-social btn-google"> <i class="fa fa-Google"></i> Sign in with Google
+        </a>
+    </div>
+    
+    <h1>Google New reCaptcha using Java</h1>
+    <div style="width: 400px; margin: auto">
+        <form action="HandleRecaptcha">
+            <h3>Registration Form</h3>
+            <div class="field">
+                <div class="label">Enter Name</div>
+                <input value="" name="name" />
+            </div>
+
+            <div class="field">
+                <div class="label">Enter Email</div>
+                <input name="email" />
+            </div>
+
+            <div class="g-recaptcha" data-sitekey="6LeypCAUAAAAAASwiiNkdKlK7JmSOlUewCgS0gj6"></div>
+
+            <div class="field">
+                <input type="submit" value="submit" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

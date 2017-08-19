@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  <servlet>
+    <servlet-name>HelloAppEngine</servlet-name>
+    <servlet-class>HelloAppEngine</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloAppEngine</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+    <!-- Oauth2 Servlets -->
+    <servlet>
+        <description></description>
+        <display-name>oauth2callback</display-name>
+        <servlet-name>oauth2callback</servlet-name>
+        <servlet-class>com.example.oauth2.OAuth2Callback</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>oauth2callback</servlet-name>
+        <url-pattern>/oauth2callback</url-pattern>
+    </servlet-mapping>
+
+    <!-- reCaptcha Servlets -->
+    <servlet>
+        <description></description>
+        <display-name>HandleRecaptcha</display-name>
+        <servlet-name>HandleRecaptcha</servlet-name>
+        <servlet-class>com.example.recaptcha.HandleRecaptcha</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HandleRecaptcha</servlet-name>
+        <url-pattern>/HandleRecaptcha</url-pattern>
+    </servlet-mapping>
+  
+</web-app>
