@@ -2,6 +2,8 @@ package com.kp.jaxwsrpc.client;
 import java.net.URL;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
+
+import com.kp.jaxwsrpc.HelloWorld;
  
 public class HelloWorldClient{
  	public static void main(String[] args) throws Exception {
@@ -9,12 +11,12 @@ public class HelloWorldClient{
  
         //1st argument service URI, refer to wsdl document above
 	    //2nd argument is service name, refer to wsdl document above
-        QName qname = new QName("http://javatpoint.com/", "HelloWorldImplService");
+        QName qname = new QName("http://jaxwsrpc.kp.com/", "HelloWorldImplService");
  
         Service service = Service.create(url, qname);
         HelloWorld hello = service.getPort(HelloWorld.class);
  
-        System.out.println(hello.getHelloWorldAsString("javatpoint rpc"));
+        System.out.println(hello.getHelloWorldAsString("kp rpc"));
  
     }
  

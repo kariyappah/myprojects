@@ -3,7 +3,7 @@ package com.kp.jaxwsrpc;
 import javax.jws.WebService;
 
 //Service Implementation
-@WebService(endpointInterface = "com.javatpoint.HelloWorld")
+@WebService(endpointInterface = "com.kp.jaxwsrpc.HelloWorld")
 public class HelloWorldImpl implements HelloWorld{
 
 	@Override
