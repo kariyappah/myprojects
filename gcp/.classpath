@@ -28,5 +28,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/thirdparty/lib/gcp/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="/thirdparty/lib/gcp/javax.servlet-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="/thirdparty/lib/gcp/jsp-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
